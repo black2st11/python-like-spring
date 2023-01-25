@@ -5,7 +5,8 @@ from member.memory_member_repository import MemoryMemberRepository
 
 
 class MemberApp:
-    def start(self):
+    @staticmethod
+    def start():
         member_id = 1
         member_service = MemberServiceImpl(MemoryMemberRepository)
         member = Member(member_id, "memberA", Grade.VIP)
