@@ -1,8 +1,4 @@
 from app_config import AppConfig
-from member.grade import Grade
-from member.member import Member
-from member.member_repository import MemberRepository
-from member.memory_member_repository import MemoryMemberRepository
 
 
 class TestAppConfig:
