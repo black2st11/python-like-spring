@@ -9,6 +9,10 @@ class AppConfig:
     
     def __init__(self):
         super().__init__()
+        self.member_service()
+        self.member_repository()
+        self.discount_policy()
+        self.order_service()
 
     def get_bean(self, key):
         return self._store.get(key)
