@@ -14,3 +14,7 @@ class MemberServiceImpl(MemberService):
 
     def find_member(self, member_id):
         return self.member_repository.find_by_id(member_id)
+
+    # 싱글톤 테스트 용도
+    def get_member_repository(self):
+        return self.member_repository

@@ -12,3 +12,7 @@ class OrderServiceImpl(OrderService):
         member = self.member_repository.find_by_id(member_id)
         discount = self.discount_policy.discount(member, item_price)
         return Order(member_id, item_name, item_price, discount)
+
+    # 테스트용
+    def get_member_repository(self):
+        return self.member_repository

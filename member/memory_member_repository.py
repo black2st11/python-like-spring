@@ -2,7 +2,9 @@ from member.member_repository import MemberRepository
 
 
 class MemoryMemberRepository(MemberRepository):
-    _store = {}
+
+    def __init__(self):
+        self._store = {}
 
     def save(self, member):
         self._store.update({member.get_id(): member})
